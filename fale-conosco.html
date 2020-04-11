@@ -16,7 +16,7 @@
                     <h2>A revolução do Google está chegando</h2>
                 </hgroup>
 
-                <img id="icone" src="./_imagens/glass-oculos-preto-peq.png">
+                <img id="icone" src="./_imagens/contato.png">
 
                 <nav id="menu">
                     <h1>Menu Principal</h1>
@@ -30,7 +30,7 @@
                 </nav>
             </header>
 
-            <section id="corpo">
+            <section id="corpo-inteiro">
 
                 <article id="noticia-principal">
                     <header id="cabecalho-artigo">
@@ -42,34 +42,71 @@
                         </hgroup>
                     </header>
 
+                    <form>
 
-                    Identificação do Usuário
-                        Nome:
-                        Senha:
-                        E-mail:
-                        Sexo:
-                            - Masculino
-                            - Feminino
-                        Data de Nascimento:
+                        <fieldset id="usuario">
+                            <legend>Identificação do Usuário</legend>
+                            <p>
+                                <label for="nome">Nome: </label>
+                                <input type="text" name="nome" id="nome" size="20" maxlength="30" placeholder="Nome completo">
+                            </p>
 
-                    Endereço do Usuário
-                        Logradouro:
-                        Número:
-                        Estado:
-                        Cidade:
+                            <p>
+                                <label for="senha">Senha:</label>
+                                <input type="password" name="senha" id="senha" size="8" maxlength="8" placeholder="8 dígitos">
+                            </p>
 
-                    Mensagem do Usuário
-                        Grau de Urgência:
-                        Mensagem:
+                            <p>
+                                <label for="email">E-mail:</label>
+                                <input type="email" name="email" id="email" size="20" maxlength="40">
+                            </p>
 
-                    Quero um Google Glass
-                        Gostaria de adquirir um Google Glass quando disponível
-                        Cor:
-                        Quantidade:
-                        Preço Total: R$
+                            <fieldset id="sexo">
+                                <legend>Sexo:</legend>
+                                <input type="radio" name="sexo" id="masc" checked>
+                                <label for="masc">Masculino</label>
+                                <br>
+                                <input type="radio" name="sexo" id="fem">
+                                <label for="fem">Feminino</label>
+                            </fieldset>
+
+                            <p>
+                                <label for="data-nasc">Data de Nascimento:</label>
+                                <input type="date" name="data-nasc" id="data-nasc">
+                            </p>
+                        </fieldset>
+
+                        <fieldset id="endereco">
+                            <legend>Endereço do Usuário</legend>
+                            <p>
+                                <label for="rua">Logradouro:</label>
+                                <input type="text" name="rua" id="rua" size="13" maxlength="80" placeholder="Rua, Aven, Trave">
+                            </p>
+                            <p>
+                                <label for="numero">Número:</label>
+                                <input type="number" name="numero" id="numero" min="0" max="99999">
+                            </p>
+                            Estado:
+                            Cidade:
+                        </fieldset>
+
+                        <fieldset id="mensagem">
+                            <legend>Mensagem do Usuário</legend>
+                            Grau de Urgência:
+                            Mensagem:
+                        </fieldset>
+                        
+                        <fieldset id="pedido">
+                            <legend>Quero um Google Glass</legend>
+                            Gostaria de adquirir um Google Glass quando disponível
+                            Cor:
+                            Quantidade:
+                            Preço Total: R$
+                        </fieldset>
 
 
-                    [BOTÃO ENVIAR]
+                        [BOTÃO ENVIAR]
+                    </form>
                 </article>
             </section>
 
