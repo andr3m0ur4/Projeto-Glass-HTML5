@@ -1,3 +1,4 @@
+// Função para mudar a foto de cada página
 function mudarFoto(foto) {
 	document.getElementById('icone').src = foto
 }
@@ -8,6 +9,13 @@ function extrairArquivo(caminho){
 	let arquivo = caminho.substring(caminho.lastIndexOf('/') + 1)
 	
 	return arquivo
+}
+
+// Função para calcular o total
+function calc_total() {
+	let qtd = parseInt(document.getElementById('qtd').value)
+	tot = qtd * 1500
+	document.getElementById('tot').value = tot
 }
 
 // Função para adicionar um evento no li
@@ -30,6 +38,9 @@ function carregar(arquivo) {
 
 	if (arquivo === 'fale-conosco.html') {
 		padrao = 'contato'
+
+		let contato = document.getElementById('contato')
+		contato.addEventListener('input', calc_total, false)
 	}
 
 	let index = document.getElementById('index')

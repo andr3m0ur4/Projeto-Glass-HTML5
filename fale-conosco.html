@@ -3,7 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>Tudo sobre Google Glass</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="./_css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="./_css/form.css">
         <script src="./_javascript/funcoes.js"></script>
     </head>
     <body>
@@ -129,13 +131,14 @@
 
                             <p>
                                 <label for="msg">Mensagem:</label>
-                                <textarea name="msg" id="msg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea>
+                                <textarea name="msg" id="msg" cols="30" rows="5" placeholder="Deixe aqui sua mensagem"></textarea>
                             </p>
                         </fieldset>
                         
                         <fieldset id="pedido">
                             <legend>Quero um Google Glass</legend>
                             <p>
+                                <input type="checkbox" name="ped" id="ped" checked>
                                 <label for="ped">
                                     Gostaria de adquirir um Google Glass quando disponível
                                 </label>
@@ -143,19 +146,23 @@
 
                             <p>
                                 <label for="cor">Cor:</label>
+                                <input type="color" name="cor" id="cor" value="#0000ff">
                             </p>
 
                             <p>
                                 <label for="qtd">Quantidade:</label>
+                                <input type="number" name="qtd" id="qtd" min="0" max="5" value="0">
                             </p>
 
                             <p>
                                 <label for="tot">Preço Total: R$</label>
+                                <input type="text" name="tot" id="tot" placeholder="Total a pagar" readonly>
                             </p>
                         </fieldset>
 
-
-                        [BOTÃO ENVIAR]
+                        <button type="bubmit" name="enviar">
+                            <img src="./_imagens/botao-enviar.png">
+                        </button>
                     </form>
                 </article>
             </section>

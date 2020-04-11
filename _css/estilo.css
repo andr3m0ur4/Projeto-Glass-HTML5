@@ -37,7 +37,7 @@ a:hover {
 
 header#cabecalho img#icone {
 	position: absolute;
-	left: 780px;
+	left: 880px;
 	top: 70px;
 }
 
@@ -103,7 +103,8 @@ nav#menu ul {
 	text-transform: uppercase;
 	position: absolute;
 	top: -20px;
-	left: 300px;
+	left: 400px;
+	min-width: 300px;
 }
 
 nav#menu li {
@@ -243,6 +244,10 @@ aside#lateral h2 {
 	padding: 5px;
 }
 
+aside#lateral div#video-recente video {
+	width: 350px;
+}
+
 /* Formatação para o rodapé */
 footer#rodape {
 	clear: both;
@@ -251,4 +256,25 @@ footer#rodape {
 
 footer#rodape p {
 	text-align: center;
+}
+
+@media (max-width: 1199.98px) {
+	header#cabecalho img#icone {
+		left: 760px;
+	}
+
+	nav#menu ul {
+		left: 300px;
+	}
+}
+
+@media (max-width: 575.98px) {
+	header#cabecalho img#icone {
+		left: 680px;
+	}
+
+	nav#menu ul {
+		left: 250px;
+		min-width: 600px;
+	}
 }
