@@ -42,7 +42,7 @@
                         </hgroup>
                     </header>
 
-                    <form>
+                    <form method="post" id="contato" action="mailto:andre.benedicto@etec.sp.gov.br">
 
                         <fieldset id="usuario">
                             <legend>Identificação do Usuário</legend>
@@ -80,28 +80,78 @@
                             <legend>Endereço do Usuário</legend>
                             <p>
                                 <label for="rua">Logradouro:</label>
-                                <input type="text" name="rua" id="rua" size="13" maxlength="80" placeholder="Rua, Aven, Trave">
+                                <input type="text" name="rua" id="rua" size="13" maxlength="80" placeholder="Rua, Av, Trav, ...">
                             </p>
+
                             <p>
                                 <label for="numero">Número:</label>
                                 <input type="number" name="numero" id="numero" min="0" max="99999">
                             </p>
-                            Estado:
-                            Cidade:
+
+                            <p>
+                                <label for="estado">Estado:</label>
+                                <select name="estado" id="estado">
+                                    <optgroup label="Região Sudeste">
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="SP" selected>São Paulo</option>
+                                        <option value="MG">Minas Gerais</option>
+                                    </optgroup>
+
+                                    <optgroup label="Região Sul">
+                                        <option value="PR">Paraná</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                    </optgroup>
+                                </select>
+                            </p>
+
+                            <p>
+                                <label for="cidade">Cidade:</label>
+                                <input type="text" name="cidade" id="cidade" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades">
+                                <datalist id="cidades">
+                                    <option value="Rio de Janeiro"></option>
+                                    <option value="Nova Iguaçu"></option>
+                                    <option value="Niterói"></option>
+                                    <option value="Belford Roxo"></option>
+                                    <option value="São Paulo"></option>
+                                    <option value="São José dos Campos"></option>
+                                    <option value="Guaratinguetá"></option>
+                                </datalist>
+                            </p>
                         </fieldset>
 
                         <fieldset id="mensagem">
                             <legend>Mensagem do Usuário</legend>
-                            Grau de Urgência:
-                            Mensagem:
+                            <p>
+                                <label for="urg">Grau de Urgência:</label>
+                                Min<input type="range" name="urg" id="urg" min="0" max="10" step="2">Max
+                            </p>
+
+                            <p>
+                                <label for="msg">Mensagem:</label>
+                                <textarea name="msg" id="msg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea>
+                            </p>
                         </fieldset>
                         
                         <fieldset id="pedido">
                             <legend>Quero um Google Glass</legend>
-                            Gostaria de adquirir um Google Glass quando disponível
-                            Cor:
-                            Quantidade:
-                            Preço Total: R$
+                            <p>
+                                <label for="ped">
+                                    Gostaria de adquirir um Google Glass quando disponível
+                                </label>
+                            </p>
+
+                            <p>
+                                <label for="cor">Cor:</label>
+                            </p>
+
+                            <p>
+                                <label for="qtd">Quantidade:</label>
+                            </p>
+
+                            <p>
+                                <label for="tot">Preço Total: R$</label>
+                            </p>
                         </fieldset>
 
 
