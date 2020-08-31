@@ -20,23 +20,23 @@ function calc_total() {
 
 // Função para adicionar um evento no li
 function carregar(arquivo) {
-	if (arquivo === 'index.html') {
+	if (arquivo === 'home') {
 		padrao = 'glass-oculos-preto-peq'
 	}
 
-	if (arquivo === 'specs.html') {
+	if (arquivo === 'specs') {
 		padrao = 'especificacoes'
 	}
 
-	if (arquivo === 'fotos.html') {
+	if (arquivo === 'fotos') {
 		padrao = 'fotos'
 	}
 
-	if (arquivo === 'multimidia.html') {
+	if (arquivo === 'multimidia') {
 		padrao = 'multimidia'
 	}
 
-	if (arquivo === 'fale-conosco.html') {
+	if (arquivo === 'fale-conosco') {
 		padrao = 'contato'
 
 		let contato = document.getElementById('contato')
@@ -44,24 +44,24 @@ function carregar(arquivo) {
 	}
 
 	let index = document.getElementById('index')
-	index.addEventListener('mouseover', () => mudarFoto('./_imagens/home.png'), false)
-	index.addEventListener('mouseout', () => mudarFoto(`./_imagens/${padrao}.png`), false)
+	index.addEventListener('mouseover', () => mudarFoto('./images/home.png'), false)
+	index.addEventListener('mouseout', () => mudarFoto(`./images/${padrao}.png`), false)
 
 	let specs = document.getElementById('specs')
-	specs.addEventListener('mouseover', () => mudarFoto('./_imagens/especificacoes.png'), false)
-	specs.addEventListener('mouseout', () => mudarFoto(`./_imagens/${padrao}.png`), false)
+	specs.addEventListener('mouseover', () => mudarFoto('./images/especificacoes.png'), false)
+	specs.addEventListener('mouseout', () => mudarFoto(`./images/${padrao}.png`), false)
 
 	let fotos = document.getElementById('fotos')
-	fotos.addEventListener('mouseover', () => mudarFoto('./_imagens/fotos.png'), false)
-	fotos.addEventListener('mouseout', () => mudarFoto(`./_imagens/${padrao}.png`), false)
+	fotos.addEventListener('mouseover', () => mudarFoto('./images/fotos.png'), false)
+	fotos.addEventListener('mouseout', () => mudarFoto(`./images/${padrao}.png`), false)
 
 	let multimidia = document.getElementById('multimidia')
-	multimidia.addEventListener('mouseover', () => mudarFoto('./_imagens/multimidia.png'), false)
-	multimidia.addEventListener('mouseout', () => mudarFoto(`./_imagens/${padrao}.png`), false)
+	multimidia.addEventListener('mouseover', () => mudarFoto('./images/multimidia.png'), false)
+	multimidia.addEventListener('mouseout', () => mudarFoto(`./images/${padrao}.png`), false)
 
 	let fale_conosco = document.getElementById('fale-conosco')
-	fale_conosco.addEventListener('mouseover', () => mudarFoto('./_imagens/contato.png'), false)
-	fale_conosco.addEventListener('mouseout', () => mudarFoto(`./_imagens/${padrao}.png`), false)
+	fale_conosco.addEventListener('mouseover', () => mudarFoto('./images/contato.png'), false)
+	fale_conosco.addEventListener('mouseout', () => mudarFoto(`./images/${padrao}.png`), false)
 }
 
 let caminho = window.location.pathname
