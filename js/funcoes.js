@@ -20,7 +20,7 @@ function calc_total() {
 
 // Função para adicionar um evento no li
 function carregar(arquivo) {
-	if (arquivo === 'home') {
+	if (arquivo === 'home' || arquivo === '') {
 		padrao = 'glass-oculos-preto-peq'
 	}
 
